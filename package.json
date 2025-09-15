@@ -6,10 +6,12 @@
         "dev": "next dev --turbopack",
         "build": "next build --turbopack",
         "start": "next start",
-        "lint": "eslint"
+        "lint": "eslint",
+        "deploy": "npm run build && npm run start"
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^7.0.1",
+        "@vercel/analytics": "^1.5.0",
         "autoprefixer": "^10.4.21",
         "framer-motion": "^12.23.12",
         "next": "15.5.2",

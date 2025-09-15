@@ -7,6 +7,7 @@ import { Space_Mono, Inter } from "next/font/google";
 import Socials from "../../components/Social";
 import ScrollNav from "../../components/ScrollNav";
 import { AnimatePresence } from "framer-motion";
+import { Analytics } from "@vercel/analytics/next";
 
 const space = Space_Mono({
     subsets: ["latin"],
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         <Socials />
                         <ScrollNav />
                         <Footer />
+                        <Analytics />
                     </ThemeProvider>
                 </AnimatePresence>
             </body>
