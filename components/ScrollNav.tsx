@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 import Link from "next/link";
 import EBLogo from "../public/EBlogo";
 import ThemeToggle from "./ThemeToggle";
 import { FaBars, FaTimes } from "react-icons/fa";
+import useActiveSection from "../hooks/useActiveSection";
 
 const navItems = ["Home", "About", "Projects", "Contact"];
 
@@ -28,6 +29,8 @@ const itemVariants: Variants = {
 
 export default function ScrollNav() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const sectionIds = navItems.map((item) => item.toLowerCase());
+    const active = useActiveSection(sectionIds);
 
     return (
         <>
@@ -47,18 +50,31 @@ export default function ScrollNav() {
                 </div>
 
                 {/* Nav links */}
-                <div className="flex flex-col items-center gap-6">
-                    {navItems.map((item, i) => (
-                        <motion.div key={i} variants={itemVariants}>
-                            <Link
-                                aria-label={`Navigate to ${item}`}
-                                href={`#${item.toLowerCase()}`}
-                                className="text-sm font-bold tracking-widest text-text-muted hover:text-primary transition-colors [writing-mode:vertical-rl] rotate-180"
-                            >
-                                {item}
-                            </Link>
-                        </motion.div>
-                    ))}
+                <div className="relative flex flex-col items-center gap-6">
+                    {navItems.map((item, i) => {
+                        const id = item.toLowerCase();
+                        const isActive = active === id;
+                        return (
+                            <motion.div key={i} variants={itemVariants} className="relative">
+                                {isActive && (
+                                    <motion.div
+                                        layoutId="highlight"
+                                        className="absolute inset-0 rounded-r-sm bg-primary"
+                                        transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                                    />
+                                )}
+                                <Link
+                                    aria-label={`Navigate to ${item}`}
+                                    href={`#${id}`}
+                                    className={`relative z-10 text-sm px-2 py-1 font-bold tracking-widest [writing-mode:vertical-rl] rotate-180 ${
+                                        isActive ? "text-white" : "text-text-muted hover:text-primary"
+                                    }`}
+                                >
+                                    {item}
+                                </Link>
+                            </motion.div>
+                        );
+                    })}
                 </div>
 
                 <ThemeToggle />

@@ -43,7 +43,7 @@ export default function ProjectCard({
             {/* Image */}
             <div className="relative group flex-1">
                 <div className="absolute overflow-hidden rounded-xl transition-all duration-500 group-hover:z-20">
-                    <Image
+                    <img
                         src={image1}
                         alt={title}
                         className="object-cover rounded-xl shadow-lg group-hover:scale-105 transition-transform duration-500"
@@ -51,7 +51,7 @@ export default function ProjectCard({
                 </div>
 
                 <div className="relative overflow-hidden rounded-xl z-30 group-hover:z-10 transition-all duration-500">
-                    <Image
+                    <img
                         src={image2}
                         alt={title}
                         className="object-cover rounded-xl shadow-lg group-hover:scale-105 transition-transform duration-500"

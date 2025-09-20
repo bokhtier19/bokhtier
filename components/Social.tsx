@@ -41,7 +41,7 @@ export default function Socials() {
                     target="_blank"
                     rel="noopener noreferrer"
                     variants={item}
-                    className="hover:text-primary transition-colors"
+                    className="hover:text-primary hover:scale-110 transition-all hover:-translate-y-0.5"
                 >
                     {social.icon}
                 </motion.a>

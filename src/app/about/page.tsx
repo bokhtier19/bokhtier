@@ -3,6 +3,8 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { FaReact, FaNodeJs, FaGitAlt, FaFigma, FaGithub } from "react-icons/fa";
+import { SiNextdotjs, SiMongodb, SiTailwindcss, SiTypescript, SiHtml5, SiCss3, SiJavascript } from "react-icons/si";
 
 export default function AboutPage() {
     return (
@@ -55,7 +57,7 @@ export default function AboutPage() {
                         className="relative group flex justify-center"
                     >
                         <div className="w-60 h-80 rounded-sm overflow-hidden shadow-lg border-2 border-green transform transition-transform duration-500 group-hover:scale-105 group-hover:shadow-primary">
-                            <Image src="/profile.jpg" alt="Elius Bokhtier" className="w-full h-full object-cover" />
+                            <img src="/profile.jpg" alt="Elius Bokhtier" className="w-full h-full object-cover" />
                         </div>
                         <div className="absolute -inset-2 border-2 border-primary opacity-20 rounded-sm group-hover:opacity-40 transition"></div>
                     </motion.div>
@@ -84,6 +86,40 @@ export default function AboutPage() {
                             <span className="font-semibold">Secondary (+10) </span> – SEBA ASSAM, 2016
                         </li>
                     </ul>
+                </motion.div>
+                {/* Tech Stack & Tools Section */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.3 }}
+                    viewport={{ once: true }}
+                    className="mt-16"
+                >
+                    <h3 className="text-3xl font-bold text-green mb-8 text-center">Tech Stack & Tools</h3>
+                    <div className="grid grid-cols-3 md:grid-cols-5 gap-8 justify-items-center">
+                        {[
+                            { icon: <SiHtml5 />, name: "HTML" },
+                            { icon: <SiCss3 />, name: "CSS" },
+                            { icon: <SiJavascript />, name: "JavaScript" },
+                            { icon: <FaReact />, name: "React" },
+                            { icon: <SiNextdotjs />, name: "Next.js" },
+                            { icon: <FaNodeJs />, name: "Node.js" },
+                            { icon: <SiMongodb />, name: "MongoDB" },
+                            { icon: <SiTailwindcss />, name: "Tailwind CSS" },
+                            { icon: <SiTypescript />, name: "TypeScript" },
+                            { icon: <FaGithub />, name: "GitHub" },
+                        ].map((tech, i) => (
+                            <motion.div
+                                key={i}
+                                whileHover={{ scale: 1.2 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="text-4xl text-primary hover:text-green transition-colors duration-300 cursor-pointer"
+                                title={tech.name}
+                            >
+                                {tech.icon}
+                            </motion.div>
+                        ))}
+                    </div>
                 </motion.div>
             </div>
         </section>

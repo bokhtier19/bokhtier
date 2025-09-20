@@ -12,43 +12,50 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="flex flex-col justify-start text-start gap-4 items-start p-2 md:p-12 max-w-4/5"
+                className="flex flex-col justify-start text-start gap-4 items-start p-2 md:p-12 max-w-4xl"
             >
                 {/* Greeting */}
-                <p className="text-primary">Hi, I’m</p>
+                <p className="text-primary text-lg">Hi, I’m</p>
 
-                {/* Main Heading (LCP target) */}
+                {/* Main Heading */}
                 <p className="text-5xl md:text-7xl font-extrabold leading-tight drop-shadow-sm font-inter">
                     Elius Bokhtier.
                 </p>
 
-                {/* Subtitle */}
+                {/* Tagline with tech stack */}
                 <h2 className="text-2xl md:text-4xl font-bold leading-tight font-inter text-text-muted">
-                    An Enthusiastic Full-Stack Developer.
+                    I build fast, scalable apps with <span className="text-primary">React</span>,{" "}
+                    <span className="text-primary">Next.js</span> & <span className="text-primary">Node.js</span>.
                 </h2>
 
+                {/* Short description */}
                 <motion.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1 }}
-                    className="mt-4 text-sm md:text-base  max-w-xl leading-relaxed text-text-muted"
+                    className="mt-4 text-sm md:text-base max-w-xl leading-relaxed text-gray-600"
                 >
                     I’m a frontend engineer with a strong interest in full-stack development, focused on building
-                    reliable, scalable, and user-centric applications. Currently, I am looking for exciting
-                    opportunities where I can learn, grow, and build cool things.
+                    reliable, scalable, and user-centric applications. Currently, I’m looking for exciting opportunities
+                    where I can learn, grow, and build cool things.
                 </motion.p>
 
                 {/* Buttons */}
-                <div className="mt-8 flex flex-wrap justify-center gap-4">
+                <div className="mt-8 flex flex-wrap gap-4">
+                    <Link
+                        href="#projects"
+                        className="px-6 py-3 rounded-xl font-semibold shadow-md bg-primary border-primary border hover:bg-primary/90 transition"
+                    >
+                        View Projects
+                    </Link>
                     <Link
                         href="/resume.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Download Resume"
-                        className="px-6 py-3 rounded-xl font-semibold shadow-md text-primary border border-primary items-center justify-center hover:opacity-90 transition flex gap-2"
+                        className="px-6 py-3 rounded-xl font-semibold shadow-md text-primary border border-primary hover:bg-primary/10 transition flex items-center gap-2"
                     >
-                        Resume
-                        <IoMdDownload size={20} />
+                        Resume <IoMdDownload size={20} />
                     </Link>
                 </div>
             </motion.div>
