@@ -8,6 +8,7 @@ import Socials from "../../components/Social";
 import ScrollNav from "../../components/ScrollNav";
 import { AnimatePresence } from "framer-motion";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const space = Space_Mono({
     subsets: ["latin"],
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         <ScrollNav />
                         <Footer />
                         <Analytics />
+                        <SpeedInsights />
                     </ThemeProvider>
                 </AnimatePresence>
             </body>
