@@ -24,7 +24,7 @@ export default function ProjectCard({ title, tech, image1, github, demo, shortDe
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-secondary  border-secondary border-2 rounded-lg shadow-md overflow-hidden hover:shadow-green/40 transition flex flex-col max-w-sm">
+                className="bg-secondary  border-primary border-2 rounded-lg shadow-md overflow-hidden hover:shadow-primary transition flex flex-col max-w-sm">
                 {/* Image */}
                 <div className="w-full h-40 overflow-hidden">
                     <img src={image1} alt={title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />

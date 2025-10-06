@@ -28,7 +28,7 @@ export default function ProjectCard({ title, shortDescription, slug, tech, image
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className={`relative border lg:border-none rounded-sm hover:cursor-pointer hover:border flex flex-col lg:flex-row overflow-hidden hover:shadow-primary transition p-4 gap-6 ${
+                className={`relative border border-primary lg:border-none rounded-sm hover:cursor-pointer hover:border flex flex-col lg:flex-row overflow-hidden hover:shadow-primary shadow-xl transition p-4 gap-6 ${
                     isEven ? "" : "md:flex-row-reverse"
                 }`}>
                 {/* Image */}
