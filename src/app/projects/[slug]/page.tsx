@@ -17,27 +17,29 @@ const ProjectPage = () => {
     if (!project) return <p className="text-center py-12 text-text-muted">Project not found</p>;
 
     return (
-        <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-5xl mx-auto py-16 px-6 flex flex-col gap-12"
-        >
+        <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="max-w-5xl mx-auto py-16 px-6 flex flex-col gap-12">
             {/* Project Title */}
             <h1 className="text-4xl md:text-5xl font-space font-bold mb-6 relative inline-block">
                 {project.title}
                 <span className="absolute left-0 bottom-0 w-full h-1 bg-text-muted opacity-20 rounded-lg"></span>
             </h1>
 
-            {/* Project Slug */}
-            <p className="text-sm text-text-muted mb-4">
-                project: <span className="font-mono">{project.slug}</span>
-            </p>
+            {/* Project Slug and Demo Link */}
+            <div className="flex justify-between">
+                <p className="text-sm text-text-muted mb-4">
+                    project: <span className="font-mono">{project.slug}</span>
+                </p>
+                {project.demo && (
+                    <Link href={project.demo} target="_blank" rel="noopener noreferrer" className="text-primary hover:text-text-muted transition-colors duration-200 flex items-center gap-2">
+                        <i className="fa-solid fa-arrow-up-right-from-square text-xl"></i> Live Demo
+                    </Link>
+                )}
+            </div>
 
             {/* Project Image */}
             {project.image1 && (
                 <div className="w-full rounded-2xl overflow-hidden shadow-lg">
-                    <Image src={project.image1} alt={project.title} className="w-full h-auto object-cover" />
+                    <img src={project.image1} alt={project.title} className="w-full h-auto object-cover" />
                 </div>
             )}
 
@@ -79,32 +81,18 @@ const ProjectPage = () => {
                 <div className="flex gap-4 mt-2 justify-between">
                     <div className="flex gap-4">
                         {project.github && (
-                            <Link
-                                href={project.github}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="hover:text-green-light transition-colors duration-200 flex items-center gap-2"
-                            >
+                            <Link href={project.github} target="_blank" rel="noopener noreferrer" className="hover:text-green-light transition-colors duration-200 flex items-center gap-2">
                                 <i className="fa-brands fa-github text-xl"></i> GitHub
                             </Link>
                         )}
                         {project.demo && (
-                            <Link
-                                href={project.demo}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="hover:text-text-muted transition-colors duration-200 flex items-center gap-2"
-                            >
+                            <Link href={project.demo} target="_blank" rel="noopener noreferrer" className="hover:text-text-muted transition-colors duration-200 flex items-center gap-2">
                                 <i className="fa-solid fa-arrow-up-right-from-square text-xl"></i> Live Demo
                             </Link>
                         )}
                     </div>
                     <div>
-                        <Link
-                            href="/#projects"
-                            rel="noopener noreferrer"
-                            className="hover:text-text-muted transition-colors duration-200 flex items-center gap-2 text-end"
-                        >
+                        <Link href="/#projects" rel="noopener noreferrer" className="hover:text-text-muted transition-colors duration-200 flex items-center gap-2 text-end">
                             <i className="fa-solid fa-arrow-left text-xl"></i> Back to Projects
                         </Link>
                     </div>
