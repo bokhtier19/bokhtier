@@ -35,12 +35,7 @@ export const projects: Project[] = [
         image2: "/RhinoMovies.png",
         github: "https://github.com/bokhtier19/Rhinomovies",
         demo: "https://rhino-movies.vercel.app/",
-        futureFeatures: [
-            "Add user authentication and personal watchlists",
-            "Movie recommendations based on user preferences",
-            "Dark mode support for better UX",
-            "Implement rating and review system",
-        ],
+        futureFeatures: ["Add user authentication and personal watchlists", "Movie recommendations based on user preferences", "Dark mode support for better UX", "Implement rating and review system"],
     },
     {
         slug: "rhinopad",
@@ -60,6 +55,7 @@ export const projects: Project[] = [
             "Enhanced real-time collaboration with typing indicators",
         ],
     },
+    /*
     {
         slug: "rhinochat",
         title: "RhinoChat",
@@ -78,6 +74,7 @@ export const projects: Project[] = [
             "Add emoji support, message reactions, and file sharing",
         ],
     },
+    */
 ];
 
 export const secondaryprojects: SecondaryProject[] = [
@@ -91,11 +88,7 @@ export const secondaryprojects: SecondaryProject[] = [
         image1: "/MolarBearCare.png",
         github: "https://github.com/bokhtier19/Molar-Bear-Care",
         demo: "https://bokhtier19.github.io/Molar-Bear-Care/",
-        futureFeatures: [
-            "Add booking form with backend integration",
-            "Optimize SEO and accessibility",
-            "Multi-language support",
-        ],
+        futureFeatures: ["Add booking form with backend integration", "Optimize SEO and accessibility", "Multi-language support"],
     },
     {
         slug: "skip-leg-day",
@@ -107,11 +100,7 @@ export const secondaryprojects: SecondaryProject[] = [
         image1: "/SkipLegDay.png",
         github: "https://github.com/bokhtier19/Skip_Leg_Day",
         demo: "https://bokhtier19.github.io/Skip_Leg_Day/",
-        futureFeatures: [
-            "Add interactive workout timers or guides",
-            "Mobile-first enhancements",
-            "Include blog/news section for fitness updates",
-        ],
+        futureFeatures: ["Add interactive workout timers or guides", "Mobile-first enhancements", "Include blog/news section for fitness updates"],
     },
     {
         slug: "bark-and-brawl",
@@ -123,11 +112,7 @@ export const secondaryprojects: SecondaryProject[] = [
         image1: "/BarkAndBrawl.png",
         github: "https://github.com/bokhtier19/Bark-and-Brawl",
         demo: "https://bokhtier19.github.io/Bark-and-Brawl/",
-        futureFeatures: [
-            "Add animation interactions for user engagement",
-            "Convert to React for better maintainability",
-            "Add blog or gallery section for canine content",
-        ],
+        futureFeatures: ["Add animation interactions for user engagement", "Convert to React for better maintainability", "Add blog or gallery section for canine content"],
     },
     {
         slug: "anulipi",
@@ -139,10 +124,6 @@ export const secondaryprojects: SecondaryProject[] = [
         image1: "/Anulipi.png",
         github: "https://github.com/bokhtier19/Anulipi",
         demo: "https://bokhtier19.github.io/Anulipi/#/",
-        futureFeatures: [
-            "Add user accounts and authentication",
-            "Enable media uploads (images/audio)",
-            "Mobile UI improvements and responsive enhancements",
-        ],
+        futureFeatures: ["Add user accounts and authentication", "Enable media uploads (images/audio)", "Mobile UI improvements and responsive enhancements"],
     },
 ];
