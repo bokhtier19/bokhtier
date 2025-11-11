@@ -35,11 +35,11 @@ export default function ProjectCard({ title, shortDescription, slug, tech, image
 
                 <div className="relative group flex-1 justify-center flex items-center gap-4">
                     <div className="absolute overflow-hidden rounded-xl flex justify-center items-center transition-all duration-500 group-hover:z-20">
-                        <img src={image1} width={500} alt={title} className="object-cover rounded-xl shadow-lg group-hover:scale-105 transition-transform duration-500" />
+                        <Image src={image1} width={500} alt={title} className="object-cover rounded-xl shadow-lg group-hover:scale-105 transition-transform duration-500" />
                     </div>
 
                     <div className="relative overflow-hidden rounded-xl z-30 group-hover:z-10 transition-all duration-500">
-                        <img src={image2} width={500} alt={title} className="object-cover rounded-xl shadow-lg group-hover:scale-105 transition-transform duration-500" />
+                        <Image src={image2} width={500} alt={title} className="object-cover rounded-xl shadow-lg group-hover:scale-105 transition-transform duration-500" />
                     </div>
                 </div>
 

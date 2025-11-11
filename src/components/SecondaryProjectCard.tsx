@@ -27,7 +27,7 @@ export default function ProjectCard({ title, tech, image1, github, demo, shortDe
                 className="bg-secondary w-full  border-primary border-2 rounded-lg shadow-md overflow-hidden hover:shadow-primary transition flex flex-col max-w-sm">
                 {/* Image */}
                 <div className="w-full h-40 overflow-hidden">
-                    <img src={image1} alt={title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                    <Image src={image1} alt={title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                 </div>
 
                 {/* Content */}

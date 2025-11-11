@@ -2,7 +2,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaReact, FaNodeJs, FaGitAlt, FaFigma, FaGithub } from "react-icons/fa";
+import Image from "next/image";
+import { FaReact, FaNodeJs, FaGithub } from "react-icons/fa";
 import { SiNextdotjs, SiMongodb, SiTailwindcss, SiTypescript, SiHtml5, SiCss3, SiJavascript } from "react-icons/si";
 
 export default function AboutPage() {
@@ -40,7 +41,7 @@ export default function AboutPage() {
                         viewport={{ once: true }}
                         className="relative group flex justify-center">
                         <div className="w-60 h-80 rounded-sm overflow-hidden shadow-lg border-2 border-green transform transition-transform duration-500 group-hover:scale-105 group-hover:shadow-primary">
-                            <img src="/profile.jpg" alt="Elius Bokhtier" className="w-full h-full object-cover" />
+                            <Image src="/profile.jpg" alt="Elius Bokhtier" className="w-full h-full object-cover" />
                         </div>
                         <div className="absolute -inset-2 border-2 border-primary opacity-20 rounded-sm group-hover:opacity-40 transition"></div>
                     </motion.div>

@@ -37,7 +37,7 @@ export default function ContactPage() {
                     viewport={{ once: true }}
                     className="flex flex-col max-w-[70%] text-center text-md md:text-xl font-inter gap-4 text-slate-500 mb-12 md:p-8">
                     <p>I’m still learning, improving, and trying to find my way in this exciting world of development. Every bit of guidance or opportunity means the world to me.</p>
-                    <p>So if you’re reading this and feel like saying "Hi" or offering a small chance to prove myself, please do — I’d be so grateful.</p>
+                    <p>So if you’re reading this and feel like saying Hi or offering a small chance to prove myself, please do — I’d be so grateful.</p>
                 </motion.div>
 
                 {/* CTA Form*/}

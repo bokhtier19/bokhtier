@@ -4,9 +4,10 @@ import { useState } from "react";
 export default function ContactForm() {
     const [result, setResult] = useState("");
 
-    const onSubmit = async (event: any) => {
+    const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const formData = new FormData(event.target);
+        const form = event.currentTarget;
+        const formData = new FormData(form);
         formData.append("access_key", "52fc427e-eae0-4467-84b2-d6bb3550dc58");
 
         const response = await fetch("https://api.web3forms.com/submit", {

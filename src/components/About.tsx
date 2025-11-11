@@ -2,6 +2,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function AboutPage() {
     return (
@@ -43,7 +44,7 @@ export default function AboutPage() {
                         viewport={{ once: true }}
                         className="relative group flex justify-center">
                         <div className="w-72 h-72 rounded-xl overflow-hidden shadow-lg border-2 border-green transform transition-transform duration-500 group-hover:scale-105 group-hover:shadow-green">
-                            <img src="/profile.jpg" alt="Elius Bokhtier" className="w-full h-full object-cover" />
+                            <Image src="/profile.jpg" alt="Elius Bokhtier" className="w-full h-full object-cover" />
                         </div>
                         <div className="absolute -inset-2 border-2 border-green opacity-20 rounded-xl group-hover:opacity-40 transition"></div>
                     </motion.div>
