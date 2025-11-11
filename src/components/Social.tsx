@@ -27,12 +27,7 @@ const item = {
 
 export default function Socials() {
     return (
-        <motion.div
-            className="md:fixed bottom-10 right-8 flex flex-col items-center gap-6 text-2xl text-text-muted"
-            variants={container}
-            initial="hidden"
-            animate="show"
-        >
+        <motion.div className="hidden md:fixed md:flex bottom-10 right-8  flex-col items-center gap-6 text-2xl text-text-muted" variants={container} initial="hidden" animate="show">
             {socials.map((social, i) => (
                 <motion.a
                     key={i}
@@ -41,19 +36,13 @@ export default function Socials() {
                     target="_blank"
                     rel="noopener noreferrer"
                     variants={item}
-                    className="hover:text-primary hover:scale-110 transition-all hover:-translate-y-0.5"
-                >
+                    className="hover:text-primary hover:scale-110 transition-all hover:-translate-y-0.5">
                     {social.icon}
                 </motion.a>
             ))}
 
             {/* Vertical line */}
-            <motion.div
-                className="w-[2px] h-20 bg-text-muted mt-4"
-                initial={{ scaleY: 0 }}
-                animate={{ scaleY: 1 }}
-                transition={{ duration: 0.8, delay: socials.length * 0.2 }}
-            />
+            <motion.div className="w-[2px] h-20 bg-text-muted mt-4" initial={{ scaleY: 0 }} animate={{ scaleY: 1 }} transition={{ duration: 0.8, delay: socials.length * 0.2 }} />
         </motion.div>
     );
 }

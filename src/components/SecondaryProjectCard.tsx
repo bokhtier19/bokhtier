@@ -24,7 +24,7 @@ export default function ProjectCard({ title, tech, image1, github, demo, shortDe
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-secondary  border-primary border-2 rounded-lg shadow-md overflow-hidden hover:shadow-primary transition flex flex-col max-w-sm">
+                className="bg-secondary w-full  border-primary border-2 rounded-lg shadow-md overflow-hidden hover:shadow-primary transition flex flex-col max-w-sm">
                 {/* Image */}
                 <div className="w-full h-40 overflow-hidden">
                     <img src={image1} alt={title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
@@ -38,7 +38,7 @@ export default function ProjectCard({ title, tech, image1, github, demo, shortDe
                     {/* Tech stack */}
                     <div className="flex flex-wrap gap-2 mt-2">
                         {tech.map((item, i) => (
-                            <span key={i} className="px-2 py-1 text-xs rounded-sm text-primary bg-navy font-medium">
+                            <span key={i} className="px-2 py-1 border border-secondary text-xs rounded-sm  text-primary bg-navy font-medium">
                                 {item}
                             </span>
                         ))}
@@ -54,7 +54,7 @@ export default function ProjectCard({ title, tech, image1, github, demo, shortDe
                         {demo && (
                             <a href={demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm text-white hover:text-green transition">
                                 <FaExternalLinkAlt size={16} />
-                                Live Demo
+                                Demo
                             </a>
                         )}
                         {slug && (

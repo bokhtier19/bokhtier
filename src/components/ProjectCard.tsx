@@ -28,13 +28,13 @@ export default function ProjectCard({ title, shortDescription, slug, tech, image
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className={`relative border border-primary lg:border-none rounded-sm hover:cursor-pointer hover:border flex flex-col lg:flex-row overflow-hidden hover:shadow-primary shadow-xl transition p-4 gap-6 ${
+                className={`relative border border-primary justify-center rounded-sm hover:cursor-pointer hover:border flex flex-col lg:flex-row overflow-hidden hover:shadow-primary shadow-xl transition p-4 gap-6 ${
                     isEven ? "" : "md:flex-row-reverse"
                 }`}>
                 {/* Image */}
 
-                <div className="relative group flex-1">
-                    <div className="absolute overflow-hidden rounded-xl transition-all duration-500 group-hover:z-20">
+                <div className="relative group flex-1 justify-center flex items-center gap-4">
+                    <div className="absolute overflow-hidden rounded-xl flex justify-center items-center transition-all duration-500 group-hover:z-20">
                         <img src={image1} width={500} alt={title} className="object-cover rounded-xl shadow-lg group-hover:scale-105 transition-transform duration-500" />
                     </div>
 

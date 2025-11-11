@@ -1,5 +1,5 @@
-import ProjectCard from "../../../components/ProjectCard";
-import SecondaryProjectCard from "../../../components/SecondaryProjectCard";
+import ProjectCard from "../../components/ProjectCard";
+import SecondaryProjectCard from "../../components/SecondaryProjectCard";
 import { projects, secondaryprojects } from "../../../lib/projects";
 
 export default function ProjectsSection() {
@@ -15,10 +15,10 @@ export default function ProjectsSection() {
                 </div>
             </div>
 
-            <div className=" px-4 md:px-8 flex flex-col gap-12 items-center">
+            <div className="px-4 md:px-12 w-[80%] flex flex-col gap-12 items-center">
                 <p>Other Projects</p>
                 <div>
-                    <div className="grid grid-cols-1  lg:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-8">
                         {secondaryprojects.map((project, index) => (
                             <SecondaryProjectCard key={index} {...project} />
                         ))}

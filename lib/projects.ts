@@ -84,7 +84,8 @@ export const secondaryprojects: SecondaryProject[] = [
         shortDescription: "Static website for a dental clinic with a clean, responsive layout.",
         description:
             "Molar Bear Care is a static website for a dental clinic, highlighting services, contact information, and business details. The website’s clean, responsive layout ensures visitors can easily navigate and access information, while a professional design helps establish trust and credibility.",
-        tech: ["HTML", "CSS", "GitHub Pages"],
+        tech: ["React", "Tailwind", "JavaScript"],
+
         image1: "/MolarBearCare.png",
         github: "https://github.com/bokhtier19/Molar-Bear-Care",
         demo: "https://bokhtier19.github.io/Molar-Bear-Care/",
@@ -96,7 +97,8 @@ export const secondaryprojects: SecondaryProject[] = [
         shortDescription: "Fitness-themed static website highlighting leg workouts and tips.",
         description:
             "Skip Leg Day is a fitness-focused static website that emphasizes leg workouts and healthy lifestyle content. It provides users with structured information, tips, and branding elements designed to engage and motivate. The layout is clean, simple, and optimized for readability.",
-        tech: ["HTML", "CSS", "GitHub Pages"],
+        tech: ["React", "Tailwind", "JavaScript"],
+
         image1: "/SkipLegDay.png",
         github: "https://github.com/bokhtier19/Skip_Leg_Day",
         demo: "https://bokhtier19.github.io/Skip_Leg_Day/",
@@ -108,7 +110,8 @@ export const secondaryprojects: SecondaryProject[] = [
         shortDescription: "Playful website combining canine charm with creative design.",
         description:
             "Bark & Brawl is a creative website merging canine charm with visual design. The platform emphasizes interactive graphics, playful animations, and an engaging user experience. It’s designed to showcase branding and visual content in a fun, memorable way.",
-        tech: ["HTML", "CSS", "JavaScript", "GitHub Pages"],
+        tech: ["React", "Tailwind", "JavaScript"],
+
         image1: "/BarkAndBrawl.png",
         github: "https://github.com/bokhtier19/Bark-and-Brawl",
         demo: "https://bokhtier19.github.io/Bark-and-Brawl/",
@@ -120,7 +123,7 @@ export const secondaryprojects: SecondaryProject[] = [
         shortDescription: "Platform for creative self-expression with interactive UI.",
         description:
             "Anulipi is a platform for self-expression, allowing users to share creative ideas meaningfully. With a modern, interactive UI and hash-routing navigation, it provides an intuitive experience for users to navigate content seamlessly. The platform emphasizes clean design and usability, making self-expression accessible and engaging.",
-        tech: ["HTML", "CSS", "JavaScript", "GitHub Pages"],
+        tech: ["React", "Tailwind", "JavaScript"],
         image1: "/Anulipi.png",
         github: "https://github.com/bokhtier19/Anulipi",
         demo: "https://bokhtier19.github.io/Anulipi/#/",

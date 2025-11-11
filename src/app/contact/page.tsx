@@ -2,10 +2,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { HiHand } from "react-icons/hi";
 import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
-import Link from "next/link";
 import { SiGmail } from "react-icons/si";
+import ContactForm from "../../components/ContactForm";
+import CopyEmailButton from "@/components/CopyMailButton";
 
 const socials = [
     { icon: <FaGithub />, link: "https://github.com/bokhtier19" },
@@ -18,7 +18,7 @@ const socials = [
 export default function ContactPage() {
     return (
         <section id="contact" className="min-h-screen flex items-center justify-center py-20 px-6 md:px-12 lg:px-24">
-            <div className="p-4 max-e-[30%] text-center ">
+            <div className="p-4 max-e-[30%] text-center flex flex-col w-full justify-center items-center">
                 {/* Heading */}
                 <motion.h2
                     initial={{ opacity: 0, y: -30 }}
@@ -35,9 +35,26 @@ export default function ContactPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="flex flex-col text-md md:text-xl font-inter gap-4 text-slate-500 mb-12 md:p-8">
+                    className="flex flex-col max-w-[70%] text-center text-md md:text-xl font-inter gap-4 text-slate-500 mb-12 md:p-8">
                     <p>I’m still learning, improving, and trying to find my way in this exciting world of development. Every bit of guidance or opportunity means the world to me.</p>
-                    <p>So if you’re reading this and feel like saying hi or offering a small chance to prove myself, please do — I’d be so grateful.</p>
+                    <p>So if you’re reading this and feel like saying "Hi" or offering a small chance to prove myself, please do — I’d be so grateful.</p>
+                </motion.div>
+
+                {/* CTA Form*/}
+                <ContactForm />
+
+                {/* Contact Card */}
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.7 }}
+                    viewport={{ once: true }}
+                    className="p-8 mb-12 px-4 transition hover:shadow-green/40">
+                    <p className="text-slate-500 font-inter mb-4">Drop me an email:</p>
+                    <p className="text-md px-2 md:text-xl font-space underline underline-offset-4 flex gap-2 items-center">
+                        bokhtierelius19@gmail.com
+                        <CopyEmailButton />
+                    </p>
                 </motion.div>
 
                 {/* Socials Links */}
@@ -55,30 +72,6 @@ export default function ContactPage() {
                         </motion.a>
                     ))}
                 </motion.div>
-
-                {/* Contact Card */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.7 }}
-                    viewport={{ once: true }}
-                    className="p-8 mb-12 px-4 transition hover:shadow-green/40">
-                    <p className="text-slate-500 font-inter mb-4">Drop me an email:</p>
-                    <a href="mailto:bokhtierelius19@gmail.com" className="text-md px-2 md:text-3xl font-space text-green underline underline-offset-4 hover:text-primary">
-                        bokhtierelius19@gmail.com
-                    </a>
-                </motion.div>
-
-                {/* CTA Button */}
-                <motion.a
-                    href="mailto:bokhtierelius19@gmail.com"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                    viewport={{ once: true }}
-                    className="inline-block px-8 py-4 bg-transparent border-2 border-primary text-primary font-space text-lg rounded-lg shadow-md transition hover:bg-primary hover:text-navy hover:shadow-primary/50">
-                    Say Hello <HiHand className="inline-block ml-2 text-xl" />
-                </motion.a>
             </div>
         </section>
     );

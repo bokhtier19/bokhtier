@@ -2,10 +2,10 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
-import Footer from "../../components/Footer";
+import Footer from "../components/Footer";
 import { Space_Mono, Inter } from "next/font/google";
-import Socials from "../../components/Social";
-import ScrollNav from "../../components/ScrollNav";
+import Socials from "../components/Social";
+import ScrollNav from "../components/ScrollNav";
 import { AnimatePresence } from "framer-motion";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
