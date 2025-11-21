@@ -21,13 +21,13 @@ export default function ContactForm() {
 
     return (
         <form onSubmit={onSubmit} className="w-[90%]  md:w-[60%] mx-auto mt-10 p-6 border-primary rounded-2xl shadow-lg border flex flex-col gap-4 ">
-            <h2 className="text-2xl font-semibold text-center mb-2">Feedback Form</h2>
+            <h2 className="text-2xl font-semibold text-center mb-2"> Your Valuable Feedback</h2>
 
             <input type="text" name="name" placeholder="Your Name" required />
 
             <input type="email" name="email" placeholder="Your Email" required />
 
-            <textarea name="message" placeholder="Your Valuable Feedback" required rows={4}></textarea>
+            <textarea name="message" placeholder="Your Message" required rows={4}></textarea>
 
             <button type="submit" className="bg-primary hover:cursor-pointer text-navy font-semibold py-3 rounded-md hover:bg-white hover:text-primary transition">
                 Send Message

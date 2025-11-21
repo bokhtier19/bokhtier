@@ -3,18 +3,17 @@
 import { useState } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 import Link from "next/link";
-import EBLogo from "../../public/EBlogo";
 import ThemeToggle from "./ThemeToggle";
 import { FaBars, FaTimes } from "react-icons/fa";
 import useActiveSection from "../../hooks/useActiveSection";
 
-const navItems = ["Home", "About", "Projects", "Contact"];
+const navItems = ["Home", "Projects", "About", "Contact"];
 
 const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
         opacity: 1,
-        transition: { staggerChildren: 0.2, staggerDirection: -1 },
+        transition: { staggerChildren: 0.2, staggerDirection: 1 },
     },
 };
 
@@ -34,45 +33,47 @@ export default function ScrollNav() {
 
     return (
         <>
-            {/* Desktop Sidebar Nav */}
+            {/* Desktop  NavBar */}
             <motion.div
-                className="hidden md:flex fixed left-8 top-1/2 -translate-y-1/2 flex-col items-center gap-6 z-50"
+                className="hidden  py-4 md:flex mx-auto shadow-2xl sticky top-0 items-center justify-between  gap-6 z-50 bg-bg"
                 initial="hidden"
                 animate="visible"
                 variants={containerVariants}
                 viewport={{ once: true }}>
                 {/* Logo */}
-                <div className="border border-primary p-2 pl-4 rounded-full mb-8">
+                <div className="flex items-center ml-20">
                     <Link href={"/"} className="flex items-center text-primary">
-                        <EBLogo />
+                        <img src="/logo.png" alt="" width={40} />
                     </Link>
                 </div>
 
-                {/* Nav links */}
-                <div className="relative flex flex-col items-center gap-6">
-                    {navItems.map((item, i) => {
-                        const id = item.toLowerCase();
-                        const isActive = active === id;
-                        return (
-                            <motion.div key={i} variants={itemVariants} className="relative">
-                                {isActive && <motion.div layoutId="highlight" className="absolute inset-0 rounded-r-sm bg-primary" transition={{ type: "spring", stiffness: 400, damping: 25 }} />}
-                                <Link
-                                    aria-label={`Navigate to ${item}`}
-                                    href={`#${id}`}
-                                    className={`relative z-10 text-sm px-2 py-1 font-bold tracking-widest [writing-mode:vertical-rl] rotate-180 ${
-                                        isActive ? "text-white" : "text-text-muted hover:text-primary"
-                                    }`}>
-                                    {item}
-                                </Link>
-                            </motion.div>
-                        );
-                    })}
+                <div className="flex items-center gap-4">
+                    {/* Nav links */}
+                    <div className="relative flex  items-center gap-6">
+                        {navItems.map((item, i) => {
+                            const id = item.toLowerCase();
+                            const isActive = active === id;
+                            return (
+                                <motion.div key={i} variants={itemVariants} className="relative">
+                                    {isActive && <motion.div layoutId="highlight" className="absolute inset-0 rounded-r-sm" transition={{ type: "spring", stiffness: 400, damping: 25 }} />}
+                                    <Link
+                                        aria-label={`Navigate to ${item}`}
+                                        href={`#${id}`}
+                                        className={`relative z-10 text-sm px-2 py-1 font-bold tracking-widest rotate-180 ${
+                                            isActive ? "text-primary underline underline-offset-2" : "text-text-muted hover:text-white transition-colors"
+                                        }`}>
+                                        {item}
+                                    </Link>
+                                </motion.div>
+                            );
+                        })}
+                    </div>
+
+                    <ThemeToggle />
+
+                    {/* Bottom bar */}
+                    <motion.div initial={{ width: 20 }} animate={{ width: 80 }} transition={{ duration: 0.6, delay: 0.5 }} className="h-px   bg-text-secondary" />
                 </div>
-
-                <ThemeToggle />
-
-                {/* Bottom bar */}
-                <motion.div initial={{ height: 0 }} animate={{ height: 80 }} transition={{ duration: 0.6, delay: 0.5 }} className="w-px bg-text-muted hover:bg-primary transition-colors" />
             </motion.div>
 
             {/* Mobile Nav Button */}
@@ -111,7 +112,7 @@ export default function ScrollNav() {
                             {/* Logo */}
                             <div className="mb-6">
                                 <Link href="/" onClick={() => setMenuOpen(false)}>
-                                    <EBLogo />
+                                    <img src="/logo.png" alt="" width={40} />
                                 </Link>
                             </div>
 

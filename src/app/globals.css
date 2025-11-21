@@ -1,44 +1,74 @@
 @import "tailwindcss";
 @import "@fortawesome/fontawesome-free/css/all.min.css";
 
-.text-inter {
-    font-family: var(--font-inter), sans-serif;
+:root {
+    /* Fonts */
+    --font-inter: "Inter", sans-serif;
+
+    /* Light Mode Colors */
+    --background: #f8fafc; /* very light gray */
+    --surface: #e2e8f0; /* slate-200 */
+    --foreground: #0f172a; /* slate-900 */
+    --text-muted: #475569; /* slate-600 */
+
+    --primary: #14b8a6; /* teal-500 */
+    --secondary: #1e293b; /* slate-800 */
+
+    /* Extra tokens for consistency */
+    --border: #e5e7eb;
+    --card: #ffffff;
 }
 
-/* Custom theme with Tailwind tokens */
-@theme inline {
-    --font-inter: "Inter", monospace;
-
-    /* Light mode */
-    --color-bg: #f8fafc; /* very light gray instead of pure white */
-    --color-surface: #e2e8f0; /* slate-200 */
-    --color-text: #0f172a; /* slate-900 */
-    --color-text-muted: #475569; /* slate-600 */
-    --color-primary: #14b8a6; /* teal-500 */
-    --color-secondary: #1e293b; /* slate-800 */
-}
-
-/* Dark mode */
+.dark,
 [data-theme="dark"] {
-    --color-bg: #0f172a; /* slate-900 */
-    --color-surface: #1e293b; /* slate-800 */
-    --color-text: #f8fafc; /* very light gray for readability */
-    --color-text-muted: #94a3b8; /* slate-400 */
-    --color-primary: #2dd4bf; /* teal-400 */
-    --color-secondary: #334155; /* slate-700 */
+    --background: #0f172a; /* slate-900 */
+    --surface: #1e293b; /* slate-800 */
+    --foreground: #f8fafc; /* light gray */
+    --text-muted: #94a3b8; /* slate-400 */
+
+    --primary: #2dd4bf; /* teal-400 */
+    --secondary: #334155; /* slate-700 */
+
+    --border: #334155;
+    --card: #1e293b;
+}
+
+@theme inline {
+    --font-sans: var(--font-inter);
+
+    --color-primary: var(--primary);
+    --color-secondary: var(--secondary);
+
+    --color-bg: var(--background);
+    --color-surface: var(--surface);
+
+    --color-text-primary: var(--foreground);
+    --color-text-secondary: var(--text-muted);
+
+    --color-border: var(--border);
+    --color-card: var(--card);
 }
 
 body {
-    background-color: var(--color-bg);
-    color: var(--color-text);
-    font-family: var(--font-space-mono), monospace;
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-inter), sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Inputs */
+input,
+textarea {
+    @apply w-full bg-transparent p-3 rounded-sm border-b border-b-primary
+           focus:outline-none focus:ring-2 focus:ring-primary;
+}
+
+/* Smooth scroll */
 html {
     scroll-behavior: smooth;
 }
 
-input,
-textarea {
-    @apply rounded-sm border-b border-b-primary bg-transparent p-3  focus:outline-none focus:ring-2 focus:ring-primary w-full;
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
 }

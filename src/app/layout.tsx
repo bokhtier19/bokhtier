@@ -34,9 +34,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <body className="font-sans">
                 <AnimatePresence>
                     <ThemeProvider attribute="data-theme" defaultTheme="system" enableSystem disableTransitionOnChange>
+                        <ScrollNav />
                         {children}
                         <Socials />
-                        <ScrollNav />
                         <Footer />
                         <Analytics />
                         <SpeedInsights />

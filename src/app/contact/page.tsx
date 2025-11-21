@@ -43,6 +43,8 @@ export default function ContactPage() {
                 {/* CTA Form*/}
                 <ContactForm />
 
+                <p className="text-slate-500 font-inter my-6 mb-4">OR</p>
+
                 {/* Contact Card */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}

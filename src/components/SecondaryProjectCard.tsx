@@ -27,7 +27,7 @@ export default function ProjectCard({ title, tech, image1, github, demo, shortDe
                 className="bg-secondary w-full  border-primary border-2 rounded-lg shadow-md overflow-hidden hover:shadow-primary transition flex flex-col max-w-sm">
                 {/* Image */}
                 <div className="w-full h-40 overflow-hidden">
-                    <Image src={image1} alt={title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                    <img src={image1} alt={title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                 </div>
 
                 {/* Content */}
@@ -52,13 +52,13 @@ export default function ProjectCard({ title, tech, image1, github, demo, shortDe
                             </a>
                         )}
                         {demo && (
-                            <a href={demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm text-white hover:text-green transition">
+                            <a href={demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm text-white hover:text-primary transition">
                                 <FaExternalLinkAlt size={16} />
                                 Demo
                             </a>
                         )}
                         {slug && (
-                            <a href={"./projects/" + slug} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm text-white hover:text-green transition">
+                            <a href={"./projects/" + slug} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm text-white hover:text-primary transition">
                                 <FaFile size={16} /> Details
                             </a>
                         )}

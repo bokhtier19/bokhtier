@@ -28,18 +28,18 @@ export default function ProjectCard({ title, shortDescription, slug, tech, image
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className={`relative border border-primary justify-center rounded-sm hover:cursor-pointer hover:border flex flex-col lg:flex-row overflow-hidden hover:shadow-primary shadow-xl transition p-4 gap-6 ${
+                className={`relative border border-primary justify-center rounded-sm hover:cursor-pointer  flex flex-col lg:flex-row overflow-hidden  hover:border-4  transition p-4 gap-6 ${
                     isEven ? "" : "md:flex-row-reverse"
                 }`}>
                 {/* Image */}
 
                 <div className="relative group flex-1 justify-center flex items-center gap-4">
                     <div className="absolute overflow-hidden rounded-xl flex justify-center items-center transition-all duration-500 group-hover:z-20">
-                        <Image src={image1} width={500} alt={title} className="object-cover rounded-xl shadow-lg group-hover:scale-105 transition-transform duration-500" />
+                        <img src={image1} width={500} alt={title} className="object-cover rounded-xl shadow-lg group-hover:scale-105 transition-transform duration-500" />
                     </div>
 
                     <div className="relative overflow-hidden rounded-xl z-30 group-hover:z-10 transition-all duration-500">
-                        <Image src={image2} width={500} alt={title} className="object-cover rounded-xl shadow-lg group-hover:scale-105 transition-transform duration-500" />
+                        <img src={image2} width={500} alt={title} className="object-cover rounded-xl shadow-lg group-hover:scale-105 transition-transform duration-500" />
                     </div>
                 </div>
 
@@ -47,7 +47,7 @@ export default function ProjectCard({ title, shortDescription, slug, tech, image
                 <div className="p-5 flex flex-1 flex-col justify-center gap-4">
                     <h3 className="text-xl font-semibold font-space text-primary">{title}</h3>
 
-                    <div className="bg-secondary text-white text-sm p-4 my-4 rounded-sm z-50 w-full">
+                    <div className="bg-secondary text-white text-sm p-4 my-4 rounded-sm z-20 w-full">
                         <p className="text-sm leading-relaxed">{shortDescription}</p>
                     </div>
 
@@ -63,19 +63,19 @@ export default function ProjectCard({ title, shortDescription, slug, tech, image
                     {/* Links */}
                     <div className="flex gap-4 pt-2">
                         {github && (
-                            <a href={github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm hover:text-primary transition">
+                            <Link href={github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm hover:text-primary transition">
                                 <FaGithub size={16} /> Code
-                            </a>
+                            </Link>
                         )}
                         {demo && (
-                            <a href={demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm hover:text-primary transition">
+                            <Link href={demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm hover:text-primary transition">
                                 <FaExternalLinkAlt size={16} /> Live Demo
-                            </a>
+                            </Link>
                         )}
                         {slug && (
-                            <a href={"/projects/" + slug} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm hover:text-primary transition">
+                            <Link href={"/projects/" + slug} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm hover:text-primary transition">
                                 <FaFile size={16} /> Details
-                            </a>
+                            </Link>
                         )}
                     </div>
                 </div>

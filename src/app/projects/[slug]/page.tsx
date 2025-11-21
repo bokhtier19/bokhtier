@@ -39,7 +39,7 @@ const ProjectPage = () => {
             {/* Project Image */}
             {project.image1 && (
                 <div className="w-full rounded-2xl overflow-hidden shadow-lg">
-                    <Image src={project.image1} alt={project.title} className="w-full h-auto object-cover" />
+                    <img src={project.image1} alt={project.title} className="w-full h-auto object-cover" />
                 </div>
             )}
 
