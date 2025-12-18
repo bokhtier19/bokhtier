@@ -1,12 +1,13 @@
 import ProjectCard from "../../components/ProjectCard";
 import SecondaryProjectCard from "../../components/SecondaryProjectCard";
 import {projects, secondaryprojects} from "../../../lib/projects";
+import SectionHeading from "@/components/SectionHeading";
 
 export default function ProjectsSection() {
     return (
         <section id="projects" className="flex flex-col items-center justify-center">
             <div className="py-20 md:max-w-[80%] px-6 md:px-12 flex flex-col gap-12 items-center">
-                <h2 className="text-4xl font-bold font-space text-green mb-8 font-inter">Projects</h2>
+                <SectionHeading index="01" title="Some Things I’ve Built" />
 
                 <div className="flex flex-col gap-8">
                     {projects.map((project, index) => (

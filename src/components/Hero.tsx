@@ -26,8 +26,7 @@ const Hero = () => {
 
                 {/* Short description */}
                 <motion.p initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 1}} className="mt-4 text-sm md:text-base max-w-xl leading-relaxed text-gray-600">
-                    I’m a frontend engineer with a strong interest in full-stack development, focused on building reliable, scalable, and user-centric applications. Currently, I’m looking for exciting
-                    opportunities where I can learn, grow, and build cool things.
+                    I am a Full-Stack Engineer with 2 years of experience building modern web applications. I focus on performance, clean design, and scalable architecture.
                 </motion.p>
 
                 {/* CTA Buttons */}
