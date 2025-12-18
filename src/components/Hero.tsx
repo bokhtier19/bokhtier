@@ -1,17 +1,17 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
-import { IoMdDownload } from "react-icons/io";
+import {motion} from "framer-motion";
+import {IoMdDownload} from "react-icons/io";
 import Link from "next/link";
 
 const Hero = () => {
     return (
         <section id="hero" className="min-h-screen flex justify-center items-center px-6 md:px-12">
             <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                initial={{opacity: 0, y: 50}}
+                animate={{opacity: 1, y: 0}}
+                transition={{duration: 0.8}}
                 className="flex flex-col  justify-start text-start gap-4 items-start p-2 md:p-12 w-[90%] md:max-w-[80%]">
                 {/* Greeting */}
                 <p className="text-primary text-lg">Hi, I’m</p>
@@ -25,7 +25,7 @@ const Hero = () => {
                 </h2>
 
                 {/* Short description */}
-                <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }} className="mt-4 text-sm md:text-base max-w-xl leading-relaxed text-gray-600">
+                <motion.p initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 1}} className="mt-4 text-sm md:text-base max-w-xl leading-relaxed text-gray-600">
                     I’m a frontend engineer with a strong interest in full-stack development, focused on building reliable, scalable, and user-centric applications. Currently, I’m looking for exciting
                     opportunities where I can learn, grow, and build cool things.
                 </motion.p>

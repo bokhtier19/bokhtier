@@ -1,35 +1,36 @@
 // src/app/about/page.tsx
 "use client";
 
-import { motion } from "framer-motion";
+import {motion} from "framer-motion";
 import Image from "next/image";
-import { FaReact, FaNodeJs, FaGithub } from "react-icons/fa";
-import { SiNextdotjs, SiMongodb, SiTailwindcss, SiTypescript, SiHtml5, SiCss3, SiJavascript } from "react-icons/si";
+import {FaReact, FaNodeJs, FaGithub} from "react-icons/fa";
+import {GiGraduateCap} from "react-icons/gi";
+import {SiNextdotjs, SiMongodb, SiTailwindcss, SiTypescript, SiHtml5, SiCss3, SiJavascript} from "react-icons/si";
 
 export default function AboutPage() {
     return (
         <section id="about" className="min-h-screen w-full flex flex-col items-center justify-center px-6 py-20 gap-16">
             <div className=" lg:max-w-5xl mx-auto max-w-[70%] flex flex-col gap-4 items-center">
                 {/* Tech Stack & Tools Section */}
-                <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }} viewport={{ once: true }} className="mt-16 w-full">
+                <motion.div initial={{opacity: 0, y: 30}} whileInView={{opacity: 1, y: 0}} transition={{duration: 0.8, delay: 0.3}} viewport={{once: true}} className="mt-16 w-full">
                     <h3 className="text-3xl font-bold  mb-8 text-center">Tech Stack & Tools</h3>
                     <div className="grid grid-cols-3 md:grid-cols-5 gap-8 justify-items-center">
                         {[
-                            { icon: <SiHtml5 />, name: "HTML" },
-                            { icon: <SiCss3 />, name: "CSS" },
-                            { icon: <SiJavascript />, name: "JavaScript" },
-                            { icon: <FaReact />, name: "React" },
-                            { icon: <SiNextdotjs />, name: "Next.js" },
-                            { icon: <FaNodeJs />, name: "Node.js" },
-                            { icon: <SiMongodb />, name: "MongoDB" },
-                            { icon: <SiTailwindcss />, name: "Tailwind CSS" },
-                            { icon: <SiTypescript />, name: "TypeScript" },
-                            { icon: <FaGithub />, name: "GitHub" },
+                            {icon: <SiHtml5 />, name: "HTML"},
+                            {icon: <SiCss3 />, name: "CSS"},
+                            {icon: <SiJavascript />, name: "JavaScript"},
+                            {icon: <FaReact />, name: "React"},
+                            {icon: <SiNextdotjs />, name: "Next.js"},
+                            {icon: <FaNodeJs />, name: "Node.js"},
+                            {icon: <SiMongodb />, name: "MongoDB"},
+                            {icon: <SiTailwindcss />, name: "Tailwind CSS"},
+                            {icon: <SiTypescript />, name: "TypeScript"},
+                            {icon: <FaGithub />, name: "GitHub"}
                         ].map((tech, i) => (
                             <motion.div
                                 key={i}
-                                whileHover={{ scale: 1.2 }}
-                                whileTap={{ scale: 0.95 }}
+                                whileHover={{scale: 1.2}}
+                                whileTap={{scale: 0.95}}
                                 className="text-4xl text-primary hover:text-green transition-colors duration-300 cursor-pointer"
                                 title={tech.name}>
                                 {tech.icon}
@@ -39,30 +40,33 @@ export default function AboutPage() {
                 </motion.div>
 
                 {/* Education Section */}
-                <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} viewport={{ once: true }} className="mt-12 mb-12 space-y-4">
+                <motion.div initial={{opacity: 0, y: 30}} whileInView={{opacity: 1, y: 0}} transition={{duration: 0.8, delay: 0.2}} viewport={{once: true}} className="mt-12 mb-12 space-y-4">
                     <h3 className="text-3xl font-bold w-full text-center mb-4">Education</h3>
-                    <ul className="list-disc list-inside space-y-4  text-text-muted">
-                        <li>
+                    <ul className="list-inside space-y-4  text-text-muted">
+                        <li className="flex gap-4 items-center">
+                            <GiGraduateCap size={30} className="text-primary" />
                             <span className="font-semibold">Bachelor of Technology (ECE)</span> – Aligarh Muslim University, 2022
                         </li>
-                        <li>
+                        <li className="flex gap-4 items-center">
+                            <GiGraduateCap size={30} className="text-primary" />
                             <span className="font-semibold">Higher Secondary (+12) </span> – AMU, 2018
                         </li>
-                        <li>
+                        <li className="flex gap-4 items-center">
+                            <GiGraduateCap size={30} className="text-primary" />
                             <span className="font-semibold">Secondary (+10) </span> – SEBA ASSAM, 2016
                         </li>
                     </ul>
                 </motion.div>
 
                 {/* Heading */}
-                <motion.h2 initial={{ opacity: 0, y: -30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-2xl md:text-4xl font-space font-bold text-center mb-12 mt-12">
+                <motion.h2 initial={{opacity: 0, y: -30}} animate={{opacity: 1, y: 0}} transition={{duration: 0.6}} className="text-2xl md:text-4xl font-space font-bold text-center mb-12 mt-12">
                     About Me
                 </motion.h2>
 
                 {/* Content Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-md">
                     {/* Left Column - Text */}
-                    <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="space-y-6">
+                    <motion.div initial={{opacity: 0, x: -50}} whileInView={{opacity: 1, x: 0}} transition={{duration: 0.8}} viewport={{once: true}} className="space-y-6">
                         <p className="leading-relaxed ">
                             Hello! I’m <span className="text-green font-semibold">Elius Bokhtier</span>, a Web Developer passionate about crafting clean, modern, and interactive web experiences. I
                             enjoy solving problems, turning ideas into reality, and learning new technologies along the way.
@@ -78,12 +82,7 @@ export default function AboutPage() {
                     </motion.div>
 
                     {/* Right Column - Image */}
-                    <motion.div
-                        initial={{ opacity: 0, x: 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8 }}
-                        viewport={{ once: true }}
-                        className="relative group flex justify-center">
+                    <motion.div initial={{opacity: 0, x: 50}} whileInView={{opacity: 1, x: 0}} transition={{duration: 0.8}} viewport={{once: true}} className="relative group flex justify-center">
                         <div className="w-60 h-80 rounded-sm overflow-hidden shadow-lg border-2 border-green transform transition-transform duration-500 group-hover:scale-105 group-hover:shadow-primary">
                             <img src="/profile.jpg" alt="Elius Bokhtier" className="w-full h-full object-cover" />
                         </div>

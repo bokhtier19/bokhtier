@@ -1,10 +1,10 @@
 // src/components/ProjectCard.tsx
 "use client";
 
-import { motion } from "framer-motion";
+import {motion} from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { FaGithub, FaExternalLinkAlt, FaFile } from "react-icons/fa";
+import {FaGithub, FaExternalLinkAlt, FaFile} from "react-icons/fa";
 
 interface ProjectCardProps {
     title: string;
@@ -16,16 +16,16 @@ interface ProjectCardProps {
     shortDescription?: string;
 }
 
-export default function ProjectCard({ title, tech, image1, github, demo, shortDescription, slug }: ProjectCardProps) {
+export default function ProjectCard({title, tech, image1, github, demo, shortDescription, slug}: ProjectCardProps) {
     return (
-        <Link href={"/projects/" + slug} target="_blank" rel="noopener noreferrer">
-            <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="bg-secondary w-full  border-primary border-2 rounded-lg shadow-md overflow-hidden hover:shadow-primary transition flex flex-col max-w-sm">
-                {/* Image */}
+        <motion.div
+            initial={{opacity: 0, y: 30}}
+            whileInView={{opacity: 1, y: 0}}
+            transition={{duration: 0.6}}
+            viewport={{once: true}}
+            className="bg-secondary w-full  border-primary border-2 rounded-lg shadow-md overflow-hidden hover:shadow-primary transition flex flex-col max-w-sm">
+            {/* Image */}
+            <Link href={"/projects/" + slug} target="_blank" rel="noopener noreferrer">
                 <div className="w-full h-40 overflow-hidden">
                     <img src={image1} alt={title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                 </div>
@@ -43,28 +43,27 @@ export default function ProjectCard({ title, tech, image1, github, demo, shortDe
                             </span>
                         ))}
                     </div>
-
-                    {/* Links */}
-                    <div className="flex gap-4 mt-3 items-end justify-end">
-                        {github && (
-                            <a href={github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm text-white hover:text-primary transition">
-                                <FaGithub size={16} /> Code
-                            </a>
-                        )}
-                        {demo && (
-                            <a href={demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm text-white hover:text-primary transition">
-                                <FaExternalLinkAlt size={16} />
-                                Demo
-                            </a>
-                        )}
-                        {slug && (
-                            <a href={"./projects/" + slug} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm text-white hover:text-primary transition">
-                                <FaFile size={16} /> Details
-                            </a>
-                        )}
-                    </div>
                 </div>
-            </motion.div>
-        </Link>
+            </Link>
+            {/* Links */}
+            <div className="flex gap-4 mt-3 items-end justify-end mb-4 px-4">
+                {github && (
+                    <a href={github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm text-white hover:text-primary transition">
+                        <FaGithub size={16} /> Code
+                    </a>
+                )}
+                {demo && (
+                    <a href={demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm text-white hover:text-primary transition">
+                        <FaExternalLinkAlt size={16} />
+                        Demo
+                    </a>
+                )}
+                {slug && (
+                    <a href={"./projects/" + slug} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm text-white hover:text-primary transition">
+                        <FaFile size={16} /> Details
+                    </a>
+                )}
+            </div>
+        </motion.div>
     );
 }
