@@ -84,7 +84,7 @@ export default function AboutPage() {
                     {/* Right Column - Image */}
                     <motion.div initial={{opacity: 0, x: 50}} whileInView={{opacity: 1, x: 0}} transition={{duration: 0.8}} viewport={{once: true}} className="relative group flex justify-center">
                         <div className="w-60 h-80 rounded-sm overflow-hidden shadow-lg border-2 border-green transform transition-transform duration-500 group-hover:scale-105 group-hover:shadow-primary">
-                            <img src="/profile.jpg" alt="Elius Bokhtier" className="w-full h-full object-cover" />
+                            <img src="/profile.png" alt="Elius Bokhtier" className="w-full h-full object-cover" />
                         </div>
                         <div className="absolute -inset-2 border-2 border-primary opacity-20 rounded-sm group-hover:opacity-40 transition"></div>
                     </motion.div>
