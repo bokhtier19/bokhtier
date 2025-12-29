@@ -31,8 +31,9 @@ export default function ContactPage() {
                     transition={{duration: 0.8}}
                     viewport={{once: true}}
                     className="flex flex-col  text-center text-xs md:text-base font-inter gap-4 text-slate-500 mb-12 md:p-8">
-                    <p>I’m still learning, improving, and trying to find my way in this exciting world of development. Every bit of guidance or opportunity means the world to me.</p>
-                    <p>So if you’re reading this and feel like saying Hi or offering a small chance to prove myself, please do — I’d be so grateful.</p>
+                    <p>
+                        I'm currently open to new opportunities and interesting projects. Whether you have a question, want to collaborate, or just want to say hi, I'll do my best to get back to you!
+                    </p>
                 </motion.div>
 
                 {/* CTA Form*/}
