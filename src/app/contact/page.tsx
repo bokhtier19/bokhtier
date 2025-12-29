@@ -32,7 +32,8 @@ export default function ContactPage() {
                     viewport={{once: true}}
                     className="flex flex-col  text-center text-xs md:text-base font-inter gap-4 text-slate-500 mb-12 md:p-8">
                     <p>
-                        I'm currently open to new opportunities and interesting projects. Whether you have a question, want to collaborate, or just want to say hi, I'll do my best to get back to you!
+                        I&apos;m currently open to new opportunities and interesting projects. Whether you have a question, want to collaborate, or just want to say hi, I&apos;ll do my best to get
+                        back to you!
                     </p>
                 </motion.div>
 
