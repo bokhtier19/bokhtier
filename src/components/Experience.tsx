@@ -6,20 +6,9 @@ import SectionHeading from "./SectionHeading";
 
 const experiences = [
     {
-        company: "Freelance",
+        company: "Arronic",
         role: "Full-Stack Developer",
-        duration: "Feb 2025 – Present",
-        points: [
-            "Designing and delivering end-to-end web solutions for small businesses and individuals.",
-            "Built admin dashboards, product systems, and real-time features using Socket.IO.",
-            "Collaborated directly with clients to define scope, architecture, and technical solutions.",
-            "Deployed applications using Vercel and Render with focus on scalability and reliability."
-        ]
-    },
-    {
-        company: "Arronic Technologies",
-        role: "Frontend Engineer / Full-Stack Developer",
-        duration: "Jun 2023 – Dec 2024",
+        duration: "Jun 2023 – Nov 2025",
         points: [
             "Built scalable, production-ready web applications using React, Next.js, and TypeScript.",
             "Worked closely with designers and backend engineers to translate business requirements into reliable UI.",
