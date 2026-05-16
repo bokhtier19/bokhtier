@@ -24,8 +24,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-    title: "Bokhtier - Full-Stack Developer",
-    description: "Frontend Engineer | React & Next.js",
+    title: "Elius Bokhtier — Full Stack Developer",
+    description: "Full Stack Developer with 2.5 years building production SaaS systems with React, Next.js, TypeScript, and Node.js. Portfolio of real-world projects.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -71,13 +71,15 @@ export default function AboutPage() {
                     {/* Left Column - Text */}
                     <motion.div initial={{opacity: 0, x: -50}} whileInView={{opacity: 1, x: 0}} transition={{duration: 0.8}} viewport={{once: true}} className="space-y-6">
                         <p className="leading-relaxed ">
-                            Hello! I’m <span className="text-green font-semibold">Elius Bokhtier</span>, a Web Developer passionate about crafting clean, modern, and interactive web experiences. I
-                            enjoy solving problems, turning ideas into reality, and learning new technologies along the way.
+                            I’m a Full Stack Developer with 2.5 years of production experience, including end-to-end ownership of a school management SaaS platform built with React, Next.js, TypeScript, and Node.js. I’ve shipped 5+ production modules, built 20+ reusable UI components, and delivered real-time features to 100+ active users.
                         </p>
 
                         <p className="leading-relaxed ">
-                            Outside of coding, I love experimenting with design, traveling, playing video games, riding, and tinkering with electronics. My goal is to keep building products that
-                            people genuinely love to use.
+                            I’m drawn to product-oriented engineering — the kind of work where you own a feature end-to-end, ship it, and see it in production. I like thinking about what gets built and why, not just how.
+                        </p>
+
+                        <p className="leading-relaxed ">
+                            Currently open to full stack, frontend-heavy, or SaaS engineering roles at startups and product companies.
                         </p>
                     </motion.div>
 

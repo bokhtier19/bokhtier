@@ -8,12 +8,12 @@ const experiences = [
     {
         company: "Arronic",
         role: "Full-Stack Developer",
-        duration: "Jun 2023 – Nov 2025",
+        duration: "Nov 2023 – Mar 2026",
         points: [
-            "Built scalable, production-ready web applications using React, Next.js, and TypeScript.",
-            "Worked closely with designers and backend engineers to translate business requirements into reliable UI.",
-            "Implemented reusable components, authentication flows, and REST API integrations.",
-            "Focused on performance optimization, clean architecture, and maintainable codebases."
+            "Led end-to-end development of production modules for a school management SaaS platform using React, Next.js, and TypeScript — supporting multi-role workflows for students, teachers, and administrators",
+            "Designed and delivered 20+ reusable UI components with Tailwind CSS, reducing feature development time by 25–30% and improving cross-module UI consistency",
+            "Implemented JWT-based authentication and role-based access control (RBAC) supporting 100+ active users across student, teacher, and admin roles",
+            "Integrated 10+ REST APIs with robust error handling and contributed to backend services across Node.js, Express.js, and MongoDB"
         ]
     }
 ];
