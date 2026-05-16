@@ -4,7 +4,6 @@
 import {motion} from "framer-motion";
 import {FaGithub, FaInstagram, FaLinkedin, FaTwitter} from "react-icons/fa";
 import {SiGmail} from "react-icons/si";
-import ContactForm from "../../components/ContactForm";
 import CopyEmailButton from "@/components/CopyMailButton";
 import SectionHeading from "./../../components/SectionHeading";
 
@@ -38,9 +37,9 @@ export default function ContactPage() {
                 </motion.div>
 
                 {/* CTA Form*/}
-                <ContactForm />
+                {/* <ContactForm /> */}
 
-                <p className="text-slate-500 font-inter my-6 mb-4">OR</p>
+                {/* <p className="text-slate-500 font-inter my-6 mb-4">OR</p> */}
 
                 {/* Contact Card */}
                 <motion.div
