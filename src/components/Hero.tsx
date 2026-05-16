@@ -26,7 +26,7 @@ const Hero = () => {
 
                 {/* Short description */}
                 <motion.p initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 1}} className="mt-4 text-sm md:text-base max-w-xl leading-relaxed text-gray-600">
-                    I am a Full-Stack Engineer with 2 years of experience building modern web applications. I focus on performance, clean design, and scalable architecture.
+                    I'm a Full Stack Developer with 2.5 years of production experience building SaaS platforms and real-time web applications. I focus on end-to-end ownership, real-world impact, and shipping things that actually work.
                 </motion.p>
 
                 {/* CTA Buttons */}

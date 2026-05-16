@@ -29,9 +29,9 @@ export const projects: Project[] = [
     {
         slug: "rhinomovies",
         title: "RhinoMovies",
-        shortDescription: "Movie discovery platform with search and filtering built using Next.js and TMDB API.",
+        shortDescription: "Server-side rendered movie discovery platform with dynamic routing, real-time search, and TMDB API integration. Deployed on Vercel.",
         description:
-            "RhinoMovies is a movie discovery platform built with Next.js and TMDB API, allowing users to explore trending, top-rated, and upcoming movies. It features robust search and filtering, dynamic movie detail pages, and a responsive interface optimized for both desktop and mobile. The platform offers a seamless browsing experience, helping users discover and keep track of their favorite films.",
+            "Server-side rendered movie discovery platform built with Next.js for performance and SEO. Dynamic routing, real-time search and filtering, TMDB API integration with optimized data-fetching strategies. Deployed on Vercel.",
         tech: ["Next.js", "React", "TMDB API"],
         image1: "/RhinoMovies.png",
         image2: "/RhinoMovies.png",
@@ -42,9 +42,9 @@ export const projects: Project[] = [
     {
         slug: "rhinopad",
         title: "RhinoPad",
-        shortDescription: "Full-stack notes app with real-time sync using React, Node.js, MongoDB, and Socket.IO.",
+        shortDescription: "Full stack notes application with real-time sync via Socket.IO, full CRUD operations, MongoDB persistence, and responsive React frontend.",
         description:
-            "RhinoPad is a full-stack notes application designed for real-time note-taking and collaboration. Built with React, Node.js, MongoDB, and Socket.IO, it allows users to create, edit, delete, and organize notes with instantaneous syncing across devices. Its clean UI ensures a distraction-free workspace, and its backend architecture supports real-time collaboration for teams or individual users.",
+            "Full stack notes application with real-time sync via Socket.IO. Full CRUD operations, MongoDB persistence, React frontend with clean state management and responsive design.",
         tech: ["React", "Node.js", "MongoDB", "Socket.IO"],
         image1: "/RhinoPad.png",
         image2: "/RhinoPad_dark.png",
@@ -61,9 +61,9 @@ export const projects: Project[] = [
     {
         slug: "rhinochat",
         title: "RhinoChat",
-        shortDescription: "Real-time chat app with online user tracking and responsive design.",
+        shortDescription: "Full-stack real-time chat app with Socket.IO, JWT auth, MongoDB persistence, live presence indicators, and TypeScript end-to-end.",
         description:
-            "RhinoChat is a real-time chat application enabling users to communicate instantly through chat rooms. Built with React, Node.js, Socket.IO, and Express, it supports online user tracking and responsive design for desktop and mobile devices. Users can engage in multiple rooms, view active participants, and enjoy a smooth messaging experience.",
+            "Full-stack real-time chat application built with Socket.IO, supporting concurrent 1-on-1 and group messaging. JWT authentication, persistent MongoDB storage, live user presence indicators, and fully responsive React UI. Built with TypeScript end-to-end.",
         tech: ["React", "Node.js", "Socket.IO", "Express"],
         image1: "/RhinoMovies.png",
         image2: "/RhinoMovies.png",
